@@ -16,3 +16,5 @@ You will be prompted to install or update the requiste packages. Following the s
 Once the package is installed, you can use it within RStudio sessions as you would any other package moving forward.
 
 For now, this package will be under a great deal of development, as new datasets are added. Until this warning is removed, I encourage you to update this package at least once a week.
+
+If there are specific data tables you'd like prioritized to be added to this package next, please submit those requests here: pepDataConnect_Updates+Improvements[https://github.com/users/StacieKozHardy/projects/4]
