@@ -4,10 +4,11 @@ Program centralized PostgreSQL database. There is a function to set up a connect
 loading each of the data sets stored within the database (matching the names of the schemas.tables in the database). This is the preferred method for extracting data from the database into R, because each of the functions pull the properly formatted data into R, taking into consideration time zones, spatial data formats, and other unique considerations for each table. Currently, this package only works to connect to the surv_jobss schema. Other schemas will be added in time.
 
 To work with this package, you need to ensure you have an .Renviron file stored in your Documents folder on your computer. Either request one from stacie.hardy@noaa.gov OR make your own in Notepad++. The final format of the file is as follows:
-pep_ip = (as provided)
-pep_db = pep
-pep_user = (as provided)
-user_pw = (as provided)
+
+	pep_ip = (as provided)
+	pep_db = pep
+	pep_user = (as provided)
+	user_pw = (as provided)
 
 Once this file is stored in the proper location, you need in install the pepDataConnect package from GitHub. To do this, open an RStudio window. In the console, enter the following code:
 	remotes::install_github('staciekozhardy/pepDataConnect')
