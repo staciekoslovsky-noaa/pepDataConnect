@@ -11,6 +11,7 @@ To work with this package, you need to ensure you have an .Renviron file stored 
 <br>
 Once this file is stored in the proper location, you need in install the pepDataConnect package from GitHub. To do this, open an RStudio window. In the console, enter the following code:<br>
 	remotes::install_github('staciekozhardy/pepDataConnect')<br>
+<br>
 You will be prompted to install or update the requiste packages. Following the steps on screen, as appropriate for your computer. 
 
 Once the package is installed, you can use it within RStudio sessions as you would any other package moving forward.
