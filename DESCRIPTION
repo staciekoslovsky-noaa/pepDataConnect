@@ -1,14 +1,15 @@
 Package: pepDataConnect
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Connect To and Get Data From the PEP PostgreSQL Database
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Author: Stacie Hardy
+Maintainer: Stacie Hardy <stacie.hardy@noaa.gov>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+License: CC0 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
 	RPostgreSQL,
 	DBI
+RoxygenNote: 7.2.2
