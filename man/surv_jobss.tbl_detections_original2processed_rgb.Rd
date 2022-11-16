@@ -37,13 +37,12 @@ con <- pep_connect()
 
 # Get data and do a lot of cool stuff here
 data <- surv_jobss.tbl_detections_original2processed_rgb(con)
-...
 
 # When you're done, disconnect from the database
 pep_disconnect(con)
 
-#' #' #' @seealso
+}
+\seealso{
 \code{\link{surv_jobss.tbl_detections_original_rgb}}
 \code{\link{surv_jobss.tbl_detections_processed_rgb}}
-
 }

@@ -17,7 +17,6 @@
 #' con <- pep_connect()
 #'
 #' # Do a lot of cool stuff here
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -56,7 +55,6 @@ pep_connect <- function() {
 #' con <- pep_connect()
 #'
 #' # Do a lot of cool stuff here
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)

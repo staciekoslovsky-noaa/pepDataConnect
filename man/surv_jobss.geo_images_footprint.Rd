@@ -34,7 +34,6 @@ con <- pep_connect()
 
 # Get data and do a lot of cool stuff here
 data <- surv_jobss.geo_images_footprint(con)
-...
 
 # When you're done, disconnect from the database
 pep_disconnect(con)

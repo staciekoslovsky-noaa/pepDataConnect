@@ -24,7 +24,6 @@ because there is a limit to how many open connections you can have to the databa
 con <- pep_connect()
 
 # Do a lot of cool stuff here
-...
 
 # When you're done, disconnect from the database
 pep_disconnect(con)

@@ -22,7 +22,6 @@ Please see the ReadMe file for this package (https://github.com/StacieKozHardy/p
 con <- pep_connect()
 
 # Do a lot of cool stuff here
-...
 
 # When you're done, disconnect from the database
 pep_disconnect(con)

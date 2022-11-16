@@ -25,7 +25,6 @@
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.geo_4abundance_images(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -63,7 +62,6 @@ surv_jobss.geo_4abundance_images <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.geo_4abundance_seals(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -102,7 +100,6 @@ surv_jobss.geo_4abundance_seals <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.geo_images_footprint(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -145,7 +142,6 @@ surv_jobss.geo_images_footprint <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.geo_images_meta(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -189,7 +185,6 @@ surv_jobss.geo_images_meta <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.tbl_detections_original_ir(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -232,12 +227,11 @@ surv_jobss.tbl_detections_original_ir <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.tbl_detections_original_rgb(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
 #'
-#' #' #' @seealso
+#' @seealso
 #' \code{\link{surv_jobss.tbl_detections_original2processed_rgb}}
 #'
 surv_jobss.tbl_detections_original_rgb <- function(con){
@@ -277,12 +271,11 @@ surv_jobss.tbl_detections_original_rgb <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.tbl_detections_original2processed_rgb(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
 #'
-#' #' #' #' @seealso
+#' @seealso
 #' \code{\link{surv_jobss.tbl_detections_original_rgb}}
 #' \code{\link{surv_jobss.tbl_detections_processed_rgb}}
 #'
@@ -326,7 +319,6 @@ surv_jobss.tbl_detections_original2processed_rgb <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.tbl_detections_processed_ir(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
@@ -370,14 +362,11 @@ surv_jobss.tbl_detections_processed_ir <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.tbl_detections_processed_rgb(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
 #'
-surv_jobss.tbl_detections_processed_ir <- function(con){
-  RPostgreSQL::dbGetQuery(con, "SELECT * FROM surv_jobss.tbl_detections_processed_ir")
-} #' @seealso
+#' @seealso
 #' \code{\link{surv_jobss.tbl_detections_original2processed_rgb}}
 #'
 surv_jobss.tbl_detections_processed_rgb <- function(con){
@@ -427,7 +416,6 @@ surv_jobss.tbl_detections_processed_rgb <- function(con){
 #'
 #' # Get data and do a lot of cool stuff here
 #' data <- surv_jobss.tbl_images(con)
-#' ...
 #'
 #' # When you're done, disconnect from the database
 #' pep_disconnect(con)
