@@ -1,74 +1,4 @@
-# surv_jobss.geo_4abundance_images --------------------------------------------------------------------------------
-#' Get JoBSS data: geo_4abundance_images
-#'
-#' @description
-#' Return all records from surv_jobss.geo_4abundance_images as an sp object
-#'
-#' @details
-#' This function returns the selected records from a query that was developed a stand-alone product for the Beaufort Sea ice seal abundance estimates.
-#' The spatial data in this query reflect the area of survey effort during the 2021 JoBSS aerial survey flights.
-#'
-#' The data in this query relate to other JoBSS data based on the following fields:
-#' \itemize{
-#'   \item flight, camera_view, dt
-#'   \item image_name
-#' }
-#'
-#' @param con A connection string to the PEP PostgreSQL database
-#'
-#' @return A sp object containing all records in the surv_jobss.geo_4abundance_images query.
-#' @export
-#'
-#' @examples
-#' # Connect to PEP database
-#' con <- pep_connect()
-#'
-#' # Get data and do a lot of cool stuff here
-#' data <- surv_jobss.geo_4abundance_images(con)
-#'
-#' # When you're done, disconnect from the database
-#' pep_disconnect(con)
-
-#'
-surv_jobss.geo_4abundance_images <- function(con){
-  sf::st_read(con, query = "SELECT * FROM surv_jobss.geo_4abundance_images")
-}
-
-# surv_jobss.geo_4abundance_seals --------------------------------------------------------------------------------
-#' Get JoBSS data: geo_4abundance_seals
-#'
-#' @description
-#' Return all records from surv_jobss.geo_4abundance_seals as an sp object
-#'
-#' @details
-#' This function returns the selected records from a query that was developed a stand-alone product for the Beaufort Sea ice seal abundance estimates.
-#' The spatial data in this query reflect the midpoints of frames in which on-effort ice seals were detected by the IR model from images collected during the 2021 JoBSS aerial survey flights.
-#'
-#' The data in this query relate to other JoBSS data based on the following fields:
-#' \itemize{
-#'   \item flight, camera_view, dt
-#'   \item image_name
-#'   \item detection_id
-#' }
-#'
-#' @param con A connection string to the PEP PostgreSQL database
-#'
-#' @return A sp object containing all records in the surv_jobss.geo_4abundance_seals query.
-#' @export
-#'
-#' @examples
-#' # Connect to PEP database
-#' con <- pep_connect()
-#'
-#' # Get data and do a lot of cool stuff here
-#' data <- surv_jobss.geo_4abundance_seals(con)
-#'
-#' # When you're done, disconnect from the database
-#' pep_disconnect(con)
-#'
-surv_jobss.geo_4abundance_seals <- function(con){
-  sf::st_read(con, query = "SELECT * FROM surv_jobss.geo_4abundance_seals")
-}
+##### TABLES #####
 
 # surv_jobss.geo_images_footprint --------------------------------------------------------------------------------
 #' Get JoBSS data: geo_images_footprint
@@ -247,7 +177,7 @@ surv_jobss.tbl_detections_original_rgb <- function(con){
 #' @details
 #' This function returns all records in the surv_jobss.tbl_detections_original2processed_rgb table. This table contains the links between the original RGB detections (which have a different unique identifier)
 #' to the processed RGB detections. These links are made based on the id fields in the surv_jobss.tbl_detections_original_rgb and surv_jobss.tbl_detections_processed_rgb tables via this table. The processed RGB
-#' detections can be linked to the original RGB detections based on two methods: closest bounding box or highest score. Wou will need to choose \emph{one} of these methods for joining the data.
+#' detections can be linked to the original RGB detections based on two methods: closest bounding box or highest score. You will need to choose \emph{one} of these methods for joining the data.
 #'
 #' The code used to generate these matches can be found in the
 #' \href{https://github.com/StacieKozHardy/IceSeal_JoBSS_DataManagement}{IceSeal_JoBSS_DataManagement} repository on GitHub.
@@ -422,4 +352,78 @@ surv_jobss.tbl_detections_processed_rgb <- function(con){
 #'
 surv_jobss.tbl_images <- function(con){
   RPostgreSQL::dbGetQuery(con, "SELECT * FROM surv_jobss.tbl_images")
+}
+
+##### QUERIES #####
+
+# surv_jobss.geo_4abundance_images --------------------------------------------------------------------------------
+#' Get JoBSS data: geo_4abundance_images
+#'
+#' @description
+#' Return all records from surv_jobss.geo_4abundance_images as an sp object
+#'
+#' @details
+#' This function returns the selected records from a query that was developed a stand-alone product for the Beaufort Sea ice seal abundance estimates.
+#' The spatial data in this query reflect the area of survey effort during the 2021 JoBSS aerial survey flights.
+#'
+#' The data in this query relate to other JoBSS data based on the following fields:
+#' \itemize{
+#'   \item flight, camera_view, dt
+#'   \item image_name
+#' }
+#'
+#' @param con A connection string to the PEP PostgreSQL database
+#'
+#' @return A sp object containing all records in the surv_jobss.geo_4abundance_images query.
+#' @export
+#'
+#' @examples
+#' # Connect to PEP database
+#' con <- pep_connect()
+#'
+#' # Get data and do a lot of cool stuff here
+#' data <- surv_jobss.geo_4abundance_images(con)
+#'
+#' # When you're done, disconnect from the database
+#' pep_disconnect(con)
+
+#'
+surv_jobss.geo_4abundance_images <- function(con){
+  sf::st_read(con, query = "SELECT * FROM surv_jobss.geo_4abundance_images")
+}
+
+# surv_jobss.geo_4abundance_seals --------------------------------------------------------------------------------
+#' Get JoBSS data: geo_4abundance_seals
+#'
+#' @description
+#' Return all records from surv_jobss.geo_4abundance_seals as an sp object
+#'
+#' @details
+#' This function returns the selected records from a query that was developed a stand-alone product for the Beaufort Sea ice seal abundance estimates.
+#' The spatial data in this query reflect the midpoints of frames in which on-effort ice seals were detected by the IR model from images collected during the 2021 JoBSS aerial survey flights.
+#'
+#' The data in this query relate to other JoBSS data based on the following fields:
+#' \itemize{
+#'   \item flight, camera_view, dt
+#'   \item image_name
+#'   \item detection_id
+#' }
+#'
+#' @param con A connection string to the PEP PostgreSQL database
+#'
+#' @return A sp object containing all records in the surv_jobss.geo_4abundance_seals query.
+#' @export
+#'
+#' @examples
+#' # Connect to PEP database
+#' con <- pep_connect()
+#'
+#' # Get data and do a lot of cool stuff here
+#' data <- surv_jobss.geo_4abundance_seals(con)
+#'
+#' # When you're done, disconnect from the database
+#' pep_disconnect(con)
+#'
+surv_jobss.geo_4abundance_seals <- function(con){
+  sf::st_read(con, query = "SELECT * FROM surv_jobss.geo_4abundance_seals")
 }

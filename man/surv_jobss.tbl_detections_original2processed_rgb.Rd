@@ -18,7 +18,7 @@ Return all records from surv_jobss.tbl_detections_original2processed_rgb as a da
 \details{
 This function returns all records in the surv_jobss.tbl_detections_original2processed_rgb table. This table contains the links between the original RGB detections (which have a different unique identifier)
 to the processed RGB detections. These links are made based on the id fields in the surv_jobss.tbl_detections_original_rgb and surv_jobss.tbl_detections_processed_rgb tables via this table. The processed RGB
-detections can be linked to the original RGB detections based on two methods: closest bounding box or highest score. Wou will need to choose \emph{one} of these methods for joining the data.
+detections can be linked to the original RGB detections based on two methods: closest bounding box or highest score. You will need to choose \emph{one} of these methods for joining the data.
 
 The code used to generate these matches can be found in the
 \href{https://github.com/StacieKozHardy/IceSeal_JoBSS_DataManagement}{IceSeal_JoBSS_DataManagement} repository on GitHub.
