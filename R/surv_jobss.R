@@ -47,7 +47,7 @@ surv_jobss.geo_images_footprint <- function(con){
 #'
 #' @details
 #' This function returns all records in the surv_jobss.geo_images_meta table. This table contains all the data in each of the meta.json files associated with set of IR, RGB, and UV images that were collected
-#' during the 2021 JoBSS aerial survey flights using the KAMERA system developed by Kitware.  The data are largely an output of information from the INS. The locations are created based on the coordinates
+#' during the 2021 JoBSS aerial survey flights using the KAMERA system developed by Kitware. The data are largely an output of information from the INS. The locations are created based on the coordinates
 #' recorded to the INS, and these locations are reflect the location of the aircraft(not the location of the image or its footprint) at the time the image was taken.
 #' All left and right camera view locations should match that of the center camera view in this data set. The code used to import these data into the database can be found in the
 #' \href{https://github.com/StacieKozHardy/IceSeal_JoBSS_DataManagement}{IceSeal_JoBSS_DataManagement} repository on GitHub.

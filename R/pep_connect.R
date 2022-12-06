@@ -64,4 +64,5 @@ pep_connect <- function() {
 #'
 pep_disconnect <- function(con) {
   DBI::dbDisconnect(con)
+  rm(con)
 }

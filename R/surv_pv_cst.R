@@ -21,7 +21,7 @@
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each polygon
+#'   \item id - unique integer identifier for each polygon
 #'   \item polyid - unique alpha-numeric identifier for each survey unit
 #'   \item stockid - integer identifier for the stock in which the survey unit falls
 #'   \item stockname - name of the stock in which the survey unit falls
@@ -70,7 +70,7 @@ surv_pv_cst.geo_polys <- function(con){
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each trackline
+#'   \item id - unique integer identifier for each trackline
 #'   \item trackid - unique identifier for each flight
 #' }
 #'
@@ -109,10 +109,10 @@ surv_pv_cst.geo_track_lines <- function(con){
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each record
+#'   \item id - unique integer identifier for each record
 #'   \item gpx_file - originating file for the GPS data
 #'   \item trackid - unique identifier for each flight
-#'   \item segmentid - unique identifer for each record within the flight
+#'   \item segmentid - unique identifier for each record within the flight
 #'   \item gps_dt - date/time of the GPS location; data are presented in GMT
 #'   \item latitude - latitude for the GPS location
 #'   \item longitude - longitude for the GPS location
@@ -159,7 +159,7 @@ surv_pv_cst.geo_track_pts <- function(con){
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each record
+#'   \item id - unique integer identifier for each record
 #'   \item trackid - unique identifier for each flight
 #'   \item survey_date - date of survey (in GMT)
 #'   \item photographer - initials of the person who took photos during the survey
@@ -221,7 +221,7 @@ surv_pv_cst.tbl_effort <- function(con){
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each record
+#'   \item id - unique integer identifier for each record
 #'   \item source_file - image name and network path
 #'   \item exif_extract_dt - date/time when the exif data were extracted (in GMT)
 #'   \item image_name - name of the image
@@ -248,8 +248,6 @@ surv_pv_cst.tbl_effort <- function(con){
 #'   \item polyid - unique alpha-numeric identifier for each survey unit; XXX if image was not used for counting
 #'   \item interpolated - indicates if the location data were interpolated
 #'   \item use_for_count - indicates if the image was used for counting
-#'
-
 #' }
 #'
 #' The data in this table relate to other coastal harbor seal survey data based on the following fields:
@@ -311,7 +309,7 @@ surv_pv_cst.tbl_image_exif <- function(con){
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each record
+#'   \item id - unique integer identifier for each record
 #'   \item trackid - unique identifier for each flight
 #'   \item image_name - name of the image
 #'   \item polyid - unique alpha-numeric identifier for each survey unit
@@ -368,7 +366,7 @@ surv_pv_cst.summ_count_by_image <- function(con){
 #'
 #' The fields in this table are as follows:
 #' \itemize{
-#'   \item id - unique integer identifer for each record
+#'   \item id - unique integer identifier for each record
 #'   \item trackid - unique identifier for each flight
 #'   \item track_rep - the survey repetition number for the survey unit (1 if the first pass, 2 if the second pass, etc.)
 #'   \item polyid - unique alpha-numeric identifier for each survey unit
