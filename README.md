@@ -1,4 +1,8 @@
 # pepDataConnect R Package
+
+Based on program-wide conversations in March 2026, it was jointly decided to deprecate this work moving forward, not because it wouldn't be useful, but because there are more useful ways to spend time and resources getting people in the program connected to our database. 
+
+
 Welcome to the GitHub site for the pepDataConnect R Package. This package is intended to serve as a direct gateway to the Polar Ecosystems 
 Program centralized PostgreSQL database. There is a function to set up a connection to the database (pep_connect), and there are functions for 
 loading each of the data sets stored within the database (matching the names of the schemas.tables in the database). This is the preferred method for extracting data from the database into R, because each of the functions pull the properly formatted data into R, taking into consideration time zones, spatial data formats, and other unique considerations for each table. Currently, this package only works to connect to the surv_jobss schema. Other schemas will be added in time.
